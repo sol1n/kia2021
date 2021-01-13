@@ -1,0 +1,36 @@
+.top {
+  background: $gray;
+  height: 377px;
+
+  .wrapper {
+    position: relative;
+  }
+}
+
+
+.x-logo {
+  background: url("../assets/x-logo.png") no-repeat center center;
+  width: 469px;
+  height: 375px;
+  //background: url("assets/x-logo.png");
+}
+
+.logo {
+  width: 104px;
+  height: 52px;
+  position: absolute;
+  top: 49px;
+  right: 70px;
+}
+
+
+.top__text {
+  &-main {
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 64px;
+    line-height: 74px;
+    color: #fff;
+  }
+}

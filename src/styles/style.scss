@@ -1,0 +1,36 @@
+@import "variables";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+}
+
+body {
+  height: 100%;
+  font-family: 'SF Pro Text', -apple-system, Roboto, Arial, san-serif;
+  font-size: 1rem;
+  padding: 0;
+  color: #000;
+  margin: 0;
+  background-color: #FFFFFF;
+}
+
+.wrapper {
+  width: 1280px;
+  margin: 0 auto;
+}
+
+//@media all and (min-width: 960px) {
+//  body {
+//    font-size: 1.5rem;
+//  }
+//}
+
+
+@import "./blocks/top";
+@import "gilroy";
