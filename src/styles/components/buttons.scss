@@ -1,0 +1,54 @@
+button {
+  font-family: 'SF Text', -apple-system, BlinkMacSystemFont, san-serif;
+}
+
+.btn {
+    -webkit-appearance: none;
+    box-shadow: none;
+    border: 0;
+    background: $red;
+    border-radius: 2px;
+    color: #fff;
+    padding: 16px 24px;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+    font-weight: 600;
+    font-size: em(16);
+    line-height: em(20, 16);
+    letter-spacing: -0.02em;
+  
+    &:hover, &:active {
+      background: darken($red, 10%);
+      outline: none;
+    }
+  
+    &:disabled, &.disabled {
+      background: #6D6E71;
+      color: #fff;
+      cursor: default;
+  
+      &:hover, &:active {
+        background: #6D6E71;
+        color: #fff;
+      }
+    }
+  }
+  
+  
+  .text-button {
+    color: $red;
+    -webkit-appearance: none;
+    box-shadow: none;
+    background: rgba(0,0,0,0);
+    border: 0;
+    text-align: center;
+    width: 100%;
+  
+    &:hover, &:active {
+      color: darken($red, 10);
+      outline: none;
+    }
+  }
+  

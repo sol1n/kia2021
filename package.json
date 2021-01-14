@@ -19,11 +19,16 @@
     "postcss-loader": "^4.1.0",
     "sass": "^1.32.4",
     "sass-loader": "^10.1.1",
-    "webpack": "^5.13.0",
+    "webpack": "^5.14.0",
     "webpack-cli": "^4.3.1",
     "webpack-dev-server": "^3.11.1"
   },
   "dependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "autocompleter": "^6.1.0",
+    "axios": "^0.21.1",
+    "babel-loader": "^8.2.2",
     "html-webpack-plugin": "^4.5.1"
   }
 }

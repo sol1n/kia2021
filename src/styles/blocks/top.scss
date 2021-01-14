@@ -1,18 +1,34 @@
 .top {
-  background: $gray;
+  background: url("../assets/water.png") no-repeat center center;
+  background-size: cover;
   height: 377px;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 50%;
+    left: 50%;
+    top: 0;
+    background: $gray;
+    height: 100%;
+    z-index: 2;
+  }
 
   .wrapper {
     position: relative;
+    display: flex;
   }
 }
 
 
 .x-logo {
   background: url("../assets/x-logo.png") no-repeat center center;
-  width: 469px;
-  height: 375px;
-  //background: url("assets/x-logo.png");
+  width: 472px;
+  height: 377px;
+  position: relative;
+  z-index: 5;
+  margin-left: -9px;
 }
 
 .logo {
@@ -21,16 +37,51 @@
   position: absolute;
   top: 49px;
   right: 70px;
+  z-index: 5;
 }
 
 
+$triangleWidth: 126px;
+
 .top__text {
+  padding: em(71) em(54) 0;
+  background: $gray;
+  position: relative;
+  flex: 1;
+  z-index: 5;
+  
+  &:before {
+    content: "";
+    display: block;
+    width: $triangleWidth;
+    height: 100%;
+    background: $gray;
+    position: absolute;
+    left: -($triangleWidth - 1);
+    top: 0;
+    clip-path: polygon(0 50%, 100% 100%, 100% 0);
+  }
+
   &-main {
     font-family: Gilroy;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 64px;
-    line-height: 74px;
+    font-size: em(64);
+    line-height: em(74, 64);
     color: #fff;
+    margin-bottom: em(36, 64);
+  }
+
+  &-conference {
+    font-family: Gilroy;
+    font-weight: 500;
+    font-size: em(36);
+    line-height: em(42, 36);
+    color: #fff;
+    margin-bottom: em(25, 36);
+  }
+
+  &-date {
+    font-family: Gilroy;
+    font-size: em(30);
+    line-height: em(35, 30);
   }
 }

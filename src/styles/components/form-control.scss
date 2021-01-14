@@ -1,0 +1,184 @@
+.form-control {
+    margin-bottom: em(17);
+    position: relative;
+  
+    &:last-child {
+      margin-bottom: 0;
+    }
+  
+    label {
+      display: block;
+      font-weight: 500;
+      font-size: em(13);
+      line-height: em(16,13);
+      color: $dark;
+      margin-bottom: 8px;
+    }
+  
+    .form-control__description {
+      font-size: 15px;
+      line-height: 18px;
+      color: #6d6d72;
+      margin-top: 8px;
+    }
+  }
+  
+  .form-group {
+    display: flex;
+
+    .form-control {
+        flex: 1;
+        margin-right: 18px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+  }
+  
+  .form-control {
+    input {
+      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+      -webkit-appearance: none;
+      background: #ffffff;
+      border: 1px solid #C7C1CC;
+      box-sizing: border-box;
+      border-radius: 4px;
+      font-size: em(16);
+      line-height: em(20,16);
+      color: $dark;
+      width: 100%;
+  
+      &:focus {
+        border-color: $red;
+        outline: none;
+      }
+  
+      &::placeholder,
+      &:placeholder,
+      &::-webkit-input-placeholder {
+        font-size: em(16);
+        line-height: em(20,16);
+        color: #8E8E93;
+        font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+    }
+  
+    &.extra-padding {
+      textarea {
+        min-height: 120px;
+      }
+    }
+
+    input {
+      height: 44px;
+      padding: em(12) em(20);
+    }
+  
+    &.is-error {
+      > input,
+      > textarea {
+        border-color: $red;
+      }
+  
+      .selector {
+        border-color: $red;
+      }
+    }
+  
+    &.is-checkbox {
+        padding-top: 5px;
+        height: 52px;
+        display: flex;
+        align-items: center;
+    }
+  }
+  
+  input.checkbox {
+    position: absolute;
+    opacity: 0; 
+    width: 0;
+    height: 0;
+    padding: 0;
+    margin: 0;
+  
+    & + label {
+      position: relative;
+      cursor: pointer;
+      padding: 0;
+      padding-left: 32px;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+      user-select: none;
+      margin: 0;
+    }
+  
+    & + label:before {
+      content: "";
+      margin-right: 8px;
+      display: inline-block;
+      vertical-align: text-top;
+      width: 26px;
+      height: 26px;
+      background: #ffffff;
+      border: 1px solid #BDBDBD;
+      box-sizing: border-box;
+      border-radius: 3px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+    }
+  
+    &:hover + label:before {
+      border-color: darken(#c7c1cc, 15);
+    }
+ 
+    &:disabled + label {
+      color: #b8b8b8;
+      cursor: auto;
+    }
+  
+    &:disabled + label:before {
+      box-shadow: none;
+      background: #ddd;
+    }
+  
+    &:checked + label:after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      height: 24px;
+      width: 24px;
+      background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjYiIGhlaWdodD0iMjYiIHZpZXdCb3g9IjAgMCAyNiAyNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3QgeD0iMC41IiB5PSIwLjUiIHdpZHRoPSIyNSIgaGVpZ2h0PSIyNSIgcng9IjIuNSIgZmlsbD0id2hpdGUiIHN0cm9rZT0iI0JEQkRCRCIvPgo8cGF0aCBkPSJNMTguOTg2NCA2LjI1NjI4TDE4Ljk4NjQgNi4yNTYzMkwxMC45MTg1IDE3LjAwNzZMMTAuOTAyNCAxNy4wMTk3TDEwLjg5NjIgMTcuMDI0NEwxMC44ODk5IDE3LjAyOTFMNy4wMTM2IDExLjg2MjRMNy4wMTM1OSAxMS44NjIzQzYuOTU1NjUgMTEuNzg1IDYuODgxODIgMTEuNzIyNCA2Ljc5NzY3IDExLjY3OTRDNi43MTM1MiAxMS42MzY0IDYuNjIxMjIgMTEuNjE0IDYuNTI3NyAxMS42MTM4SDUuMTU3MTdDNS4wMzI5NyAxMS42MTM4IDQuOTYyOTMgMTEuNzY0NyA1LjAzOTkgMTEuODY3NEM1LjAzOTkgMTEuODY3NCA1LjAzOTkgMTEuODY3NCA1LjAzOTkgMTEuODY3NEwxMC40MTAzIDE5LjAyNDVDMTAuNjU4MSAxOS4zNTQ0IDExLjEzNDIgMTkuMzU0NSAxMS4zODQgMTkuMDI0NUwxOC45ODY0IDYuMjU2MjhaTTE4Ljk4NjQgNi4yNTYyOEMxOS4xMDI2IDYuMDk5NCAxOS4yODI3IDYuMDA3ODEgMTkuNDcyMyA2LjAwNzgxSDIwLjg0MjhDMjAuOTY3MSA2LjAwNzgxIDIxLjAzNyA2LjE1ODc1IDIwLjk2MDEgNi4yNTkyNkwyMC45NjAxIDYuMjU5MzJMMTEuMzg0IDE5LjAyNDVMMTguOTg2NCA2LjI1NjI4WiIgZmlsbD0iIzJCOUQzNyIgc3Ryb2tlPSIjQkRCREJEIiBzdHJva2Utd2lkdGg9IjAuMDE1NjI1Ii8+Cjwvc3ZnPgo=");
+      background-repeat: no-repeat;
+      background-position: center center;
+      left: 1px;
+      border-radius: 4px;
+    }
+  }
+  
+  input[placeholder] {
+    text-overflow: ellipsis;
+  }
+  input::-moz-placeholder {
+    text-overflow: ellipsis;
+  }
+  input:-moz-placeholder {
+    text-overflow: ellipsis;
+  }
+  input:-ms-input-placeholder {
+    text-overflow: ellipsis;
+  }
+  
+  .form-control__error {
+    color: $red;
+    position: absolute;
+    margin-top: 1px;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+  }
