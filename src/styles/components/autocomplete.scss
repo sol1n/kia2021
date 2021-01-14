@@ -1,0 +1,25 @@
+.autocomplete {
+  border-radius: 4px;
+  border-color: #C7C1CC;
+
+  div {
+    background: #fff;
+    padding: 8px;
+    border-color: #cecece;
+
+    &:hover {
+      background: $red;
+      color: #fff;
+    }
+
+    &.selected {
+      background: $red;
+      color: #fff;
+    }
+  }
+}
+
+.autocomplete>div.selected, .autocomplete>div:hover:not(.group) {
+  background: $red;
+  color: #fff;
+}

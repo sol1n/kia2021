@@ -15,6 +15,8 @@ const initAutocomplete = function(data) {
             })
             autocomplete({
                 input: autocompleteItem,
+                // emptyMsg: "Ничего не найдено",
+                minLength: 1,
                 fetch: function (text, update) {
                     text = text.toLowerCase();
                     var suggestions = searchData.filter(n => n.label.toLowerCase().startsWith(text))

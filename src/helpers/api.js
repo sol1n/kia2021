@@ -1,26 +1,17 @@
 import {fsm} from "./fsm";
 import {getText} from "./locale";
+import {hideLoader, showLoader} from "./loader";
 
 const apiUrl = 'https://api.appercode.com/v1/kia';
 const eventSchema = 'Events';
 const eventId = "8c7840cb-c069-4221-975f-0bc232b90231";
 
 export const apiUserRegistration = function (body) {
+    showLoader();
     var xhr = new XMLHttpRequest(),
         mainFields = ['phoneNumber', 'firstName', 'lastName', 'middleName'],
         url = apiUrl + "/konferenza/register/byEmail",
         bodyForApi = {};
-
-    // for (let field in body) {
-    //     if (mainFields.indexOf(field) === -1) {
-    //         if (!bodyForApi.additionalFields) {
-    //             bodyForApi.additionalFields = {};
-    //         }
-    //         bodyForApi.additionalFields[field] = body[field].trim();
-    //     } else {
-    //         bodyForApi[field] = body[field].trim();
-    //     }
-    // }
 
     bodyForApi = {
         profile: body,
@@ -51,6 +42,7 @@ export const apiUserRegistration = function (body) {
         } else {
             fsm.dispatch('error', getText('ru', 'registeringUserError'));
         }
+        hideLoader();
     };
     xhr.send(JSON.stringify(bodyForApi));
 }

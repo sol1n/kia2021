@@ -4,6 +4,7 @@ import {inputHandler, setInputHandler} from './helpers/fsm.js';
 import {initAutocomplete} from "./helpers/autocomplete";
 import {getFormValues} from "./helpers/form-values";
 import {apiUserRegistration, apiReceiveDictionaryData} from './helpers/api';
+import {hideLoader} from "./helpers/loader";
 
 var form = null,
     agreementModal = null;
@@ -50,7 +51,10 @@ function ready() {
         event.preventDefault();
         agreementModal.classList.remove('hidden');
         agreementModal.hidden = false;
-    })
+    });
+
+
+    hideLoader();
 }
 
 function submit() {
