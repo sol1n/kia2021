@@ -1,150 +1,152 @@
 .modal {
-    overflow: hidden;
-    -webkit-overflow-scrolling:touch;
-    width: 100%;
-    display: block;
-    margin: 0 auto;
-    position: relative;
-    background: #fff;
-    color: #333;
-    max-height: 794px;
-    max-width: 555px;
-    margin: 0 auto;
-    width: auto;
-    height: 100%;
-    position: fixed;
-    top: 50%;
-    left: 0;
-    right: 0;
-    background: #FFFFFF;
-    box-shadow: 2px 4px 20px rgba(0, 0, 0, 0.25);
-    border-radius: 8px;
-    opacity: 1;
-    visibility: visible;
-    z-index: 5;
-    -webkit-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out;
-    transform: translateY(-50%);
-    padding-bottom: 61px;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  background: #fff;
+  color: #333;
+  max-height: 794px;
+  max-width: 555px;
+  margin: 0 auto;
+  width: auto;
+  height: 100%;
+  position: fixed;
+  top: 50%;
+  left: 0;
+  right: 0;
+  background: #FFFFFF;
+  box-shadow: 2px 4px 20px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  opacity: 1;
+  visibility: visible;
+  z-index: 5;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  transform: translateY(-50%);
+  padding-bottom: 61px;
 }
-  
 
-  .modal__head {
-    height: 61px;
-    background: #fff;
-    width: 100%;
-  }
 
-  .modal__head-content {
-    font-family: 'SF Text', -apple-system, Roboto, Arial, san-serif;
-    height: 32px;
-    padding: 14px 32px 16px 32px;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 24px;
-    line-height: 29px;
-    text-align: center;
-  }
+.modal__head {
+  height: 61px;
+  background: #fff;
+  width: 100%;
+}
 
-  .modal__close {
-    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjUiIGhlaWdodD0iMjUiIHZpZXdCb3g9IjAgMCAyNSAyNSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGxpbmUgeTE9Ii0xLjUiIHgyPSIzMCIgeTI9Ii0xLjUiIHRyYW5zZm9ybT0ibWF0cml4KDAuNzA3MTA3IC0wLjcwNzEwNyAwLjcxMzg3OCAwLjcwMDI3IDMgMjQuMDUwOCkiIHN0cm9rZT0iIzgyODI4MiIgc3Ryb2tlLXdpZHRoPSIzIi8+CjxsaW5lIHkxPSItMS41IiB4Mj0iMzAiIHkyPSItMS41IiB0cmFuc2Zvcm09Im1hdHJpeCgwLjcwNzEwNyAwLjcwNzEwNyAwLjcxMzg3OCAtMC43MDAyNyAzLjE1MTk4IDEpIiBzdHJva2U9IiM4MjgyODIiIHN0cm9rZS13aWR0aD0iMyIvPgo8L3N2Zz4K");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: (26/34 * 100) * 1%;
-    width: 26px;
-    height: 26px;
-    display: block;
-    position: absolute;
-    right: 22px;
-    top: 22px;
-    padding: 8px;
-    box-sizing: border-box;
-    -webkit-tap-highlight-color: transparent;
-  }
+.modal__head-content {
+  font-family: 'SF Text', -apple-system, Roboto, Arial, san-serif;
+  height: 32px;
+  padding: 14px 32px 16px 32px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+  text-align: center;
+}
 
-  .modal__close:after {
-    content:'';
-    position:absolute;
-    top:-10px; bottom:-10px; 
-    left:-10px; right:-10px; 
-  }
+.modal__close {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjUiIGhlaWdodD0iMjUiIHZpZXdCb3g9IjAgMCAyNSAyNSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGxpbmUgeTE9Ii0xLjUiIHgyPSIzMCIgeTI9Ii0xLjUiIHRyYW5zZm9ybT0ibWF0cml4KDAuNzA3MTA3IC0wLjcwNzEwNyAwLjcxMzg3OCAwLjcwMDI3IDMgMjQuMDUwOCkiIHN0cm9rZT0iIzgyODI4MiIgc3Ryb2tlLXdpZHRoPSIzIi8+CjxsaW5lIHkxPSItMS41IiB4Mj0iMzAiIHkyPSItMS41IiB0cmFuc2Zvcm09Im1hdHJpeCgwLjcwNzEwNyAwLjcwNzEwNyAwLjcxMzg3OCAtMC43MDAyNyAzLjE1MTk4IDEpIiBzdHJva2U9IiM4MjgyODIiIHN0cm9rZS13aWR0aD0iMyIvPgo8L3N2Zz4K");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: (26/34 * 100) * 1%;
+  width: 26px;
+  height: 26px;
+  display: block;
+  position: absolute;
+  right: 22px;
+  top: 22px;
+  padding: 8px;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
 
-  .modal__close:hover {
-    cursor: pointer;
-  }
+.modal__close:after {
+  content: '';
+  position: absolute;
+  top: -10px;
+  bottom: -10px;
+  left: -10px;
+  right: -10px;
+}
 
-  .modal__content {
-    overflow: hidden;
-    height: 100%;
-    margin: 0 auto;
-    padding-right: 11px;
-    font-weight: 400;
+.modal__close:hover {
+  cursor: pointer;
+}
+
+.modal__content {
+  overflow: hidden;
+  height: 100%;
+  margin: 0 auto;
+  padding-right: 11px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000000;
+}
+
+.modal__content-inner {
+  max-height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 0 16px 0 32px;
+}
+
+.modal__content {
+  h4 {
+    font-weight: 500;
     font-size: 18px;
     line-height: 21px;
-    color: #000000;
+    margin-bottom: 18px;
   }
 
-  .modal__content-inner {
-    max-height: 100%;
-    overflow-y: auto;
-    overflow-x: hidden;
-    padding: 0 16px 0 32px;
+  p {
+    margin-bottom: 18px;
   }
-
-  .modal__content {
-      h4 {
-        font-weight: 500;
-        font-size: 18px;
-        line-height: 21px;
-        margin-bottom: 18px;
-      }
-
-      p {
-        margin-bottom: 18px;
-      }
-  }
+}
 
 
-  .auth .modal__content {
-    margin: 0 auto 66px;
-  }
+.auth .modal__content {
+  margin: 0 auto 66px;
+}
 
-	.modal__content_medium-bm {
-    margin-bottom: 134px;
-  }
+.modal__content_medium-bm {
+  margin-bottom: 134px;
+}
 
-	.modal__content_small-bm {
-    margin-bottom: 82px;
-  }
+.modal__content_small-bm {
+  margin-bottom: 82px;
+}
 
-	.modal__content > p, .modal__content > ul {
-		font-size: 15px;
-    line-height: 22px;
-	}
+.modal__content > p, .modal__content > ul {
+  font-size: 15px;
+  line-height: 22px;
+}
 
 
-	.modal__content-title {
-		margin-top: 38px;
-		font-size: 24px;
-		line-height: 29px;
-		font-weight: 600;
-		color: #100027;
-	}
+.modal__content-title {
+  margin-top: 38px;
+  font-size: 24px;
+  line-height: 29px;
+  font-weight: 600;
+  color: #100027;
+}
 
-	.modal__content-title_mt16 {
-		margin-top: 16px;
-	}
+.modal__content-title_mt16 {
+  margin-top: 16px;
+}
 
-	.modal__content-subtitle {
-		margin: 8px 0;
-		font-size: 13px;
-		line-height: 16px;
-	}
+.modal__content-subtitle {
+  margin: 8px 0;
+  font-size: 13px;
+  line-height: 16px;
+}
 
-  #seconds-remain__block {
-		font-size: 13px;
-		line-height: 16px;
-		color: #6D6D72
-	}
+#seconds-remain__block {
+  font-size: 13px;
+  line-height: 16px;
+  color: #6D6D72
+}
 

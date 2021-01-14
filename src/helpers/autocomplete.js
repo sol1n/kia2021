@@ -16,7 +16,8 @@ const initAutocomplete = function(data) {
             autocomplete({
                 input: autocompleteItem,
                 // emptyMsg: "Ничего не найдено",
-                minLength: 1,
+                minLength: 0,
+                showOnFocus: true,
                 fetch: function (text, update) {
                     text = text.toLowerCase();
                     var suggestions = searchData.filter(n => n.label.toLowerCase().startsWith(text))
@@ -24,6 +25,10 @@ const initAutocomplete = function(data) {
                 },
                 onSelect: function (item) {
                     autocompleteItem.value = item.label;
+                },
+                customize: (input, inputRect, container, maxHeight) => {
+                    container.style.maxHeight = "150px";
+                    container.style.top = (Number.parseInt(container.style.top) - 3) + 'px';
                 }
             });
         }

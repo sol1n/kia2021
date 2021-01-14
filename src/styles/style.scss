@@ -1,4 +1,6 @@
 @import "variables";
+@import "fonts/gilroy";
+@import "fonts/sf";
 
 @function em($pixels, $context: $baseFontSize) {
   @if (unitless($pixels)) {
@@ -11,9 +13,6 @@
 
   @return $pixels / $context * 1em;
 }
-
-@import "gilroy";
-@import "sf";
 
 * {
   margin: 0;
