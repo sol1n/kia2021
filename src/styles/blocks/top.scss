@@ -29,6 +29,16 @@
   position: relative;
   z-index: 5;
   margin-left: -9px;
+
+  &:after {
+    content: "";
+    position: absolute;
+    display: block;
+    background: url("../assets/big-vector.svg") no-repeat center center;
+    width: 942px;
+    height: 377px;
+    right: -816px;
+  }
 }
 
 .logo {
@@ -49,18 +59,6 @@ $triangleWidth: 126px;
   position: relative;
   flex: 1;
   z-index: 5;
-  
-  &:before {
-    content: "";
-    display: block;
-    width: $triangleWidth;
-    height: 100%;
-    background: $gray;
-    position: absolute;
-    left: -($triangleWidth - 1);
-    top: 0;
-    clip-path: polygon(0 50%, 100% 100%, 100% 0);
-  }
 
   &-main {
     font-family: Gilroy;
