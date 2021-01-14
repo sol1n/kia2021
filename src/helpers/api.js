@@ -1,6 +1,7 @@
 import {fsm} from "./fsm";
 import {getText} from "./locale";
 import {hideLoader, showLoader} from "./loader";
+import {showSuccessMessage} from "./message";
 
 const apiUrl = 'https://api.appercode.com/v1/kia';
 const eventSchema = 'Events';
@@ -43,6 +44,7 @@ export const apiUserRegistration = function (body) {
             fsm.dispatch('error', getText('ru', 'registeringUserError'));
         }
         hideLoader();
+        showSuccessMessage();
     };
     xhr.send(JSON.stringify(bodyForApi));
 }
