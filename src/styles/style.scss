@@ -21,6 +21,12 @@
   }
 }
 
+@mixin netbook() {
+  @media screen and (max-width: 1250px) {
+    @content
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -135,6 +141,12 @@ ol>li:before {
     font-size: 12px;
   }
 
+  .wrapper {
+    width: 100%;
+  }
+}
+
+@include netbook() {
   .wrapper {
     width: 100%;
   }
