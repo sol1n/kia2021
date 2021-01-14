@@ -54,3 +54,28 @@
     width: 229px;
     height: 342px; 
 }
+
+@include mobile() {
+    .middle {
+        box-shadow: none;
+        height: auto;
+
+        .wrapper {
+            padding-left: 0;
+            position: relative;
+
+            &::before {
+                display: none;
+            }
+        }
+    }
+
+    .message {
+        padding: 12px 20px;
+        width: 100%;
+    }
+
+    .stripes {
+        display: none;
+    }
+}

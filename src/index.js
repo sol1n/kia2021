@@ -47,7 +47,7 @@ function ready() {
         submit();
     })
 
-    document.getElementById('agreement-btn').addEventListener('click', function (event) {
+    document.getElementById('agrement-btn').addEventListener('click', function (event) {
         event.preventDefault();
         agreementModal.classList.remove('hidden');
         agreementModal.hidden = false;

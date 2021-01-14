@@ -85,3 +85,63 @@ $triangleWidth: 126px;
     line-height: em(35, 30);
   }
 }
+
+
+@include mobile() {
+  .top {
+    height: 142px;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .x-logo {
+    width: 224px;
+    height: 141px;
+    background-size: cover;
+    margin-left: -9px;
+    position: relative;
+    background: url("../assets/x-logo-mobile.png") no-repeat center center;
+    $triangleWidth: 62px;
+
+    &:after {
+      content: "";
+      position: absolute;
+      display: block;
+      background: url("../assets/Vector.svg") no-repeat center center;
+      height: 142px;
+      width: 162.5px;
+      right: -99px;
+    }
+  }
+
+  .logo {
+    width: 43px;
+    height: 21px;
+    top: 11px;
+    right: 13px;
+  }
+
+  .top__text {
+    padding: 60px 0 59px;
+
+    &:before {
+     display: none;
+    }
+
+    &-main {
+      font-size: 20px;
+      line-height: 23px;
+      margin-bottom: 0;
+    }
+
+    &-conference {
+      display: none;
+    }
+
+    &-date {
+      display: none;
+    }
+  }
+}

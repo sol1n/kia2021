@@ -112,6 +112,10 @@ input.checkbox {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     user-select: none;
     margin: 0;
+    font-size: 13px;
+    line-height: 16px;
+    color: #100027;
+    font-weight: normal;
   }
 
   & + label:before {
@@ -184,4 +188,36 @@ input:-ms-input-placeholder {
   font-weight: 500;
   font-size: 13px;
   line-height: 16px;
+}
+
+@include mobile() {
+  .form-group {
+    flex-direction: column;
+
+    .form-control {
+      margin-right: 0;
+    }
+  }
+
+  .form-control {
+    margin-bottom: 14px;
+    label {
+      font-size: 13px;
+      line-height: 16px;
+      color: #100027;
+      letter-spacing: -0.0008em;
+    }
+  }
+
+  .form-control {
+    input {
+      font-size: 16px;
+      line-height: 20px;
+
+      &::placeholder {
+        font-size: 16px;
+        line-height: 20px;
+      }
+    }
+  }
 }

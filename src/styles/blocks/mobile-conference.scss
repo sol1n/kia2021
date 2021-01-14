@@ -1,0 +1,26 @@
+.mobile-conference {
+  display: none;
+}
+
+@include mobile() {
+  .mobile-conference {
+    display: block;
+    padding: 10px 20px 20px;
+
+    &__text {
+      font-family: Gilroy;
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 18px;
+      margin-bottom: 4px;
+    }
+
+    &__date {
+      font-family: Gilroy;
+      font-weight: 600;
+      font-size: 15px;
+      line-height: 18px;
+      color: #828282;
+    }
+  }
+}

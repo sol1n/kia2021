@@ -14,6 +14,12 @@
   @return $pixels / $context * 1em;
 }
 
+@mixin mobile() {
+  @media screen and (max-width: 768px) {
+    @content
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -94,6 +100,7 @@ ol>li:before {
 @import "./blocks/middle";
 @import "./blocks/bottom";
 @import "./blocks/success-modal";
+@import "./blocks/mobile-conference";
 
 @import "./components/buttons.scss";
 @import "./components/form-control.scss";
@@ -120,4 +127,14 @@ ol>li:before {
   border-radius: 5px;
   background-color: #C4C4C4;
   width: 6px;
+}
+
+@include mobile() {
+  body {
+    font-size: 12px;
+  }
+
+  .wrapper {
+    width: 100%;
+  }
 }

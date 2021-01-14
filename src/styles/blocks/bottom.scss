@@ -40,3 +40,31 @@
         }
     }
 }
+
+@include mobile() {
+    .bottom {
+        .wrapper {
+            padding: 24px 20px;
+        }
+    }
+
+    .form-header {
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: 0.0146em;
+        margin-bottom: 13px;
+    }
+
+    .form {
+        flex-direction: column;
+
+        .left {
+            margin-right: 0;
+            margin-bottom: 14px;
+        }
+
+        .right {
+            margin-left: 0;
+        }
+    }
+}
