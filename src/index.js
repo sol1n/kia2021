@@ -18,7 +18,7 @@ function initCloseModal() {
         closeButton.addEventListener('click', function() {
             var parent = this.parentNode.parentNode;
             parent.hidden = true;
-            agreementModal.classList.add('hidden');
+            parent.classList.add('hidden');
         })
     });
 }
@@ -53,8 +53,7 @@ function ready() {
         agreementModal.hidden = false;
     });
 
-
-    hideLoader();
+    hideLoader();  
 }
 
 function submit() {
