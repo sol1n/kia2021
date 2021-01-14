@@ -193,6 +193,7 @@ input:-ms-input-placeholder {
 @include mobile() {
   .form-group {
     flex-direction: column;
+    margin-bottom: 14px;
 
     .form-control {
       margin-right: 0;
