@@ -5,6 +5,7 @@ import {initAutocomplete} from "./helpers/autocomplete";
 import {getFormValues} from "./helpers/form-values";
 import {apiUserRegistration, apiReceiveDictionaryData} from './helpers/api';
 import {hideLoader} from "./helpers/loader";
+import { hideSuccessMessage } from "./helpers/message";
 
 var form = null,
     agreementModal = null;
@@ -53,7 +54,12 @@ function ready() {
         agreementModal.hidden = false;
     });
 
-    hideLoader();  
+    document.getElementById('another-request-btn').addEventListener('click', function (event) {
+        event.preventDefault();
+        hideSuccessMessage();
+    });
+
+    hideLoader();
 }
 
 function submit() {

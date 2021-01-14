@@ -1,7 +1,19 @@
-.modal.success {
-    height: auto;
-    
+.success-message {
+    margin-bottom: 40px;
+
     h4 {
-        font-weight: bold;
+        color: $red;
+    }
+
+    p {
+        margin-bottom: 15px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .btn {
+        width: 50%;
     }
 }
