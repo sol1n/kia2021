@@ -8,16 +8,6 @@
     .wrapper {
         padding-left: em(293);
         position: relative;
-
-        &::before {
-            content: "";
-            position: absolute;
-            left: -229px;
-            top: 13px;
-            background: url("../assets/rotated_stripes.png") no-repeat;
-            width: 229px;
-            height: 342px; 
-        }
     }
 }
 
@@ -54,11 +44,11 @@
 
 .stripes {
     position: absolute;
-    left: 0;
     top: 0;
-    background: url("../assets/stripes.png") no-repeat;
-    width: 229px;
-    height: 342px; 
+    background: url("../assets/stripes.svg") no-repeat;
+    width: 479px;
+    height: 332px;
+    left: -233px;
 }
 
 @include mobile() {
