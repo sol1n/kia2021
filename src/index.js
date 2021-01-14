@@ -6,8 +6,11 @@ import {getFormValues} from "./helpers/form-values";
 import {apiUserRegistration, apiReceiveDictionaryData} from './helpers/api';
 import {hideLoader} from "./helpers/loader";
 import { hideSuccessMessage } from "./helpers/message";
+import {fetchAutocompleteData} from "./helpers/autocomplete-data";
+import {cleanInputs} from "./helpers/clean-inputs";
 
-var form = null,
+var formSelector = '#register-form',
+    form = null,
     agreementModal = null;
 
 document.querySelector('#phoneNumber').addEventListener('input', formatInputMobile);
@@ -26,20 +29,12 @@ function initCloseModal() {
 
 function ready() {
     form = document.getElementById('register-form');
-    agreementModal = document.getElementById('agreemnet-modal');
+    agreementModal = document.getElementById('agremnet-modal');
 
-    setInputHandler('#register-form', inputHandler);
+    setInputHandler(formSelector, inputHandler);
     initCloseModal();
 
-    let aucotocmpleteData = {
-        'Cities': [],
-        'Positions': [],
-        'Regions': []
-    }
-
-    aucotocmpleteData['Cities'] = apiReceiveDictionaryData('Cities');
-    aucotocmpleteData['Positions'] = apiReceiveDictionaryData('Positions');
-    aucotocmpleteData['Regions'] = apiReceiveDictionaryData('Regions');
+    var aucotocmpleteData = fetchAutocompleteData();
 
     initAutocomplete(aucotocmpleteData);
 
@@ -56,6 +51,7 @@ function ready() {
 
     document.getElementById('another-request-btn').addEventListener('click', function (event) {
         event.preventDefault();
+        cleanInputs(formSelector)
         hideSuccessMessage();
     });
 
@@ -63,8 +59,7 @@ function ready() {
 }
 
 function submit() {
-    debugger
-    var values = getFormValues('#register-form')
+    var values = getFormValues(formSelector)
     apiUserRegistration(values);
 }
 

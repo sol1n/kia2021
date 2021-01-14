@@ -46,48 +46,6 @@ body {
   margin: 0 auto;
 }
 
-
-ol {
-  list-style: none;
-  counter-reset: li;
-  padding-left: 0;
-}
-
-ol ol ol {
-  padding-left: 16px;
-}
-
-ul, ul ul, ul ul ul {
-  padding-left: 16px;
-}
-
-li {
-  margin-top: 0.5em;
-  line-height: 1.2;
-  margin-left: 0.2em;
-}
-
-
-ol>li:before {
-  counter-increment: li;
-  content: counters(li, ".") ". ";
-}
-
-.footnote {
-  margin-top: 1rem;
-  font-size: 0.75rem;
-  line-height: 1.1;
-  color: #888;
-}
-
-.level1:before {
-  content: '';
-}
-
-.mt8 {
-  margin-top: 8px;
-}
-
 .loader-overlay {
   background: rgba(255,255,255,0.6);
   position: fixed;
@@ -97,22 +55,8 @@ ol>li:before {
   height: 100%;
 }
 
-@import "./blocks/top";
-@import "./blocks/middle";
-@import "./blocks/bottom";
-@import "./blocks/success-modal";
-@import "./blocks/mobile-conference";
-
-@import "./components/buttons.scss";
-@import "./components/form-control.scss";
-@import "./components/modal.scss";
-@import "../../node_modules/autocompleter/autocomplete.min.css";
-@import "./components/autocomplete";
-@import "./components/loader";
-
-
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 ::-webkit-scrollbar {
@@ -130,6 +74,19 @@ ol>li:before {
   width: 6px;
 }
 
+@import "./blocks/top";
+@import "./blocks/middle";
+@import "./blocks/bottom";
+@import "./blocks/success-modal";
+@import "./blocks/mobile-conference";
+
+@import "./components/buttons.scss";
+@import "./components/form-control.scss";
+@import "./components/modal.scss";
+@import "../../node_modules/autocompleter/autocomplete.min.css";
+@import "./components/autocomplete";
+@import "./components/loader";
+
 @include mobile() {
   body {
     font-size: 12px;
@@ -137,5 +94,15 @@ ol>li:before {
 
   .wrapper {
     width: 100%;
+  }
+
+  ::-webkit-scrollbar {
+    width: 2px;
+    height: 2px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: initial;
+    width: initial;
   }
 }

@@ -57,14 +57,23 @@
 
     .form {
         flex-direction: column;
+        position: relative;
 
         .left {
             margin-right: 0;
-            margin-bottom: 14px;
         }
 
         .right {
             margin-left: 0;
+        }
+
+        .agree-checkbox {
+            position: absolute;
+            bottom: 76px;
+        }
+
+        .email-control {
+            margin-bottom: 100px;
         }
     }
 }

@@ -13,7 +13,27 @@
         }
     }
 
+    h4,p {
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 21px;
+    }
+
     .btn {
         width: 50%;
+    }
+}
+
+@include mobile() {
+    .success-message {
+        .btn {
+            width: 100%;
+            margin-top: 1em;
+        }
+
+        h4, p {
+            font-size: 16px;
+            line-height: 19px;
+        }
     }
 }

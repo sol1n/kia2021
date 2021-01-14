@@ -10,7 +10,6 @@ const eventId = "8c7840cb-c069-4221-975f-0bc232b90231";
 export const apiUserRegistration = function (body) {
     showLoader();
     var xhr = new XMLHttpRequest(),
-        mainFields = ['phoneNumber', 'firstName', 'lastName', 'middleName'],
         url = apiUrl + "/konferenza/register/byEmail",
         bodyForApi = {};
 
@@ -30,21 +29,16 @@ export const apiUserRegistration = function (body) {
 
         if (xhr.status === 200) {
             var response = JSON.parse(xhr.responseText);
-            fsm.dispatch('success', response);
+            showSuccessMessage();
         } else if (xhr.status === 404)  {
-            fsm.dispatch('notFound');
+            alert('')
         } else if (xhr.status === 403)  {
-            var response = JSON.parse(xhr.responseText);
-            if (response.code === 'userPostRegistration.multipleUsers') {
-                fsm.dispatch('notFound');
-            } else {
-                fsm.dispatch('error', getText('ru', 'registeringUserError'));
-            }
+            alert('Не авторизованный запрос')
         } else {
-            fsm.dispatch('error', getText('ru', 'registeringUserError'));
+            alert('Не удалось зарегистрировать пользователя')
         }
         hideLoader();
-        showSuccessMessage();
+
     };
     xhr.send(JSON.stringify(bodyForApi));
 }
@@ -71,7 +65,7 @@ export const apiReceiveDictionaryData = function(dictionaryName, language = 'ru'
     if (xhr.status == 200) {
         return JSON.parse(xhr.responseText);
     } else {
-        fsm.dispatch('error', getText('ru', 'companiesReceiveError'));
+        alert('Не удалось получить значения справочника "' + dictionaryName + '"');
     }
 
     return [];

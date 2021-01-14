@@ -195,6 +195,10 @@ input:-ms-input-placeholder {
     flex-direction: column;
     margin-bottom: 14px;
 
+    &:last-child {
+      margin-bottom: 0;
+    }
+
     .form-control {
       margin-right: 0;
     }
