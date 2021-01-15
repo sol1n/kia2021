@@ -1,10 +1,9 @@
 .form-control {
   margin-bottom: em(17);
   position: relative;
-
-  &:last-child {
-    margin-bottom: 0;
-  }
+  //&:last-child {
+  //  margin-bottom: 0;
+  //}
 
   label {
     display: block;
@@ -223,6 +222,10 @@ input:-ms-input-placeholder {
         font-size: 16px;
         line-height: 20px;
       }
+    }
+
+    &.is-checkbox {
+      padding-top: 0;
     }
   }
 }
