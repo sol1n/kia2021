@@ -29,7 +29,8 @@ const initAutocomplete = function(data) {
                 customize: (input, inputRect, container, maxHeight) => {
                     container.style.maxHeight = "150px";
                     container.style.top = (Number.parseInt(container.style.top) - 3) + 'px';
-                }
+                },
+                preventSubmit: true
             });
         }
     });
