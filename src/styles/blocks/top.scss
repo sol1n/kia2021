@@ -3,6 +3,7 @@
   background-size: cover;
   height: 377px;
   position: relative;
+  overflow: hidden;
 
   &::after {
     content: "";
