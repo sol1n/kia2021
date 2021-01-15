@@ -21,10 +21,16 @@
   }
 }
 
-.autocomplete>div.selected, .autocomplete>div:hover:not(.group) {
+.autocomplete>div:hover:not(.group) {
+  background: lighten($red, 10);
+}
+
+.autocomplete>div.selected {
   background: $red;
   color: #fff;
 }
+
+
 
 
 input.is-autocomplete {
