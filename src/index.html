@@ -81,7 +81,8 @@
             <div class="left">
                 <div class="form-control">
                     <label>Регион</label>
-                    <input type="text" name="region" placeholder="Выберите регион"
+                    <input type="text" name="rehion" placeholder="Выберите регион"
+                           data-name="region"
                            class="is-autocomplete" data-collection="Regions" id="region"
                            autocomplete="off" autocorrect="off" autocapitalize="none" tabindex="1">
                 </div>
@@ -119,9 +120,10 @@
             </div>
             <div class="right">
                 <div class="form-control" id="city-control">
-                    <label>Город</label>
-                    <input type="text" name="city" placeholder="Выберите город" required
+                    <label>Гор&zwnj;од</label>
+                    <input type="text" name="gorod-input" placeholder="Выберите город" required
                            class="is-autocomplete" data-collection="Cities"
+                           data-name="city"
                            id="city"
                            autocomplete="off" autocorrect="off" autocapitalize="none" tabindex="2">
                 </div>

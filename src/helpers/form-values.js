@@ -7,17 +7,18 @@ export const getFormValues = function (form) {
     if (isInputsValid(form)) {
         for (var n = inputs.length; n--; ) {
             if (!inputs[n].parentNode.hidden) {
+                var inputName = inputs[n].getAttribute('data-name') || inputs[n].getAttribute('name');
                 if (inputs[n].getAttribute('inputmode') === 'tel') {
-                    formValues[inputs[n].getAttribute('name')] = inputs[n].value.replace(/[^\d]/g, '');
+                    formValues[inputName] = inputs[n].value.replace(/[^\d]/g, '');
                 } else {
                     if (inputs[n].getAttribute('type') !== 'checkbox') {
                         if (inputs[n].classList.contains('with_selector')) {
                             if (inputs[n].getAttribute('data-selected-id')) {
-                                formValues[inputs[n].getAttribute('name')] = inputs[n].getAttribute('data-selected-id');
+                                formValues[inputName] = inputs[n].getAttribute('data-selected-id');
                             }
                         } else {
                             if (inputs[n].value) {
-                                formValues[inputs[n].getAttribute('name')] = inputs[n].value;
+                                formValues[inputName] = inputs[n].value;
                             }
                         }
                     };
