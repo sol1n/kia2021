@@ -24,6 +24,10 @@ button {
     outline: none;
   }
 
+  &:focus {
+    outline: none;
+  }
+
   &:disabled, &.disabled {
     background: #6D6E71;
     color: #fff;

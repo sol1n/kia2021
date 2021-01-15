@@ -2,6 +2,7 @@ import {fsm} from "./fsm";
 import {getText} from "./locale";
 import {hideLoader, showLoader} from "./loader";
 import {showSuccessMessage} from "./message";
+import {isJson} from "./is-json";
 
 const apiUrl = 'https://api.appercode.com/v1/kia';
 const eventSchema = 'Events';
@@ -33,9 +34,14 @@ export const apiUserRegistration = function (body) {
         } else if (xhr.status === 404)  {
             alert('')
         } else if (xhr.status === 403)  {
-            alert('Не авторизованный запрос')
+            var alertText = '';
+            if (xhr.responseText && isJson(xhr.responseText)) {
+                var responseText = JSON.parse(xhr.responseText);
+                alertText = responseText.message;
+            }
+            alert(alertText || 'Не авторизованный запрос');
         } else {
-            alert('Не удалось зарегистрировать пользователя')
+            alert('Не удалось зарегистрировать пользователя');
         }
         hideLoader();
 
