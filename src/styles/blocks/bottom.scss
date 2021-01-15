@@ -83,41 +83,7 @@
             margin-left: 0;
             margin-top: 82px;
         }
-
-        //.agree-checkbox {
-        //    position: absolute;
-        //    bottom: 76px;
-        //}
-        //
-        //.email-control {
-        //    margin-bottom: 100px;
-        //}
     }
-
-    //#region-control {
-    //    margin-bottom: 96px;
-    //}
-    //
-    //#city-control {
-    //    position: absolute;
-    //    top: 82px;
-    //    width: 100%;
-    //}
-    //
-    //#lastname-control {
-    //    position: absolute;
-    //    top: 328px;
-    //    width: 100%;
-    //}
-
-    @for $i from 1 through 9 {
-        .mobile-order-#{$i} {
-            position: absolute;
-            top: 82 * ($i - 1) * 1px;
-            width: 100%;
-        }
-    }
-
 
     .form-row {
         flex-direction: column;
