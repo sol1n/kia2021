@@ -34,9 +34,9 @@ function ready() {
     setInputHandler(formSelector, inputHandler);
     initCloseModal();
 
-    var aucotocmpleteData = fetchAutocompleteData();
+    var autocompleteData = fetchAutocompleteData();
 
-    initAutocomplete(aucotocmpleteData);
+    initAutocomplete(autocompleteData);
 
     form.addEventListener('submit', function (event) {
         event.preventDefault();
