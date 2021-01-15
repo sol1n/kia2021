@@ -143,3 +143,30 @@ $triangleWidth: 126px;
     }
   }
 }
+
+@media screen and (min-width: 769px) and (max-width: 955px) {
+  .top__text {
+    &:before {
+      display: none;
+    }
+
+    &-main {
+      font-size: 48px;
+    }
+
+    &-conference {
+      font-size: 28px;
+    }
+
+    &-date {
+      font-size: 24px;
+    }
+  }
+
+  .logo {
+    width: 80px;
+    height: 40px;
+    top: 20px;
+    right: 20px;
+  }
+}

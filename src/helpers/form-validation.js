@@ -1,4 +1,8 @@
 const patterns = {
+    region: /^(?!\s*$).+/,
+    city: /^(?!\s*$).+/,
+    company: /^(?!\s*$).+/,
+    position: /^(?!\s*$).+/,
     phoneNumber: /^\+\d\s\d{3}\s\d{3}-\d{2}-\d{2}$/,
     lastName: /^.{2,}$/,
     firstName: /^.{2,}$/,
@@ -20,7 +24,7 @@ const isInputsValid = function (container, button) {
           if (inputs[n].classList.contains('with_selector')) {
             patterns[inputs[n].getAttribute('id')].test(inputs[n].getAttribute('data-selected-id') || '') || (isNonValid = true);
           } else if (patterns[inputs[n].getAttribute('id')]) {
-            patterns[inputs[n].getAttribute('id')].test(inputs[n].value) || (isNonValid = true);
+            patterns[inputs[n].getAttribute('id')].test(inputs[n].value.trim()) || (isNonValid = true);
           }
         }
       }

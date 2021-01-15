@@ -1,4 +1,4 @@
-const formatInputMobile = function() {
+const formatInputMobile = function(e) {
     var val = this.value.replace(/[^\d]/g, ''),
       delimiters = [' ', ' ', '-', '-'],
       chunks = [],
@@ -21,6 +21,12 @@ const formatInputMobile = function() {
         break;
       }
     }
+
+    if ((this.value == '' || this.value == '+') && e.inputType.toLowerCase().indexOf('delete') >= 0) {
+        this.value = '';
+        return
+    }
+
     this.value = formattedNumber;
 }
 
