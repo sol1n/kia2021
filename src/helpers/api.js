@@ -49,7 +49,6 @@ export const apiUserRegistration = function (body) {
     xhr.send(JSON.stringify(bodyForApi));
 }
 
-
 export const apiReceiveDictionaryData = function(dictionaryName, language = 'ru') {
     var xhr = new XMLHttpRequest(),
         url = apiUrl + "/objects/" + dictionaryName + "/query",
@@ -58,6 +57,7 @@ export const apiReceiveDictionaryData = function(dictionaryName, language = 'ru'
             take: -1,
             skip: 0,
             order: {
+                orderIndex: "asc",
                 title: "asc"
             }
         };
