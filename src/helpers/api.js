@@ -6,21 +6,12 @@ import {isJson} from "./is-json";
 
 const apiUrl = 'https://api.appercode.com/v1/kia';
 const eventSchema = 'Events';
-const eventId = "8c7840cb-c069-4221-975f-0bc232b90231";
+const eventId = "e7a14063-82e4-4ca5-a6fb-6afbaef2f037";
 
 export const apiUserRegistration = function (body) {
     showLoader();
     var xhr = new XMLHttpRequest(),
-        url = apiUrl + "/konferenza/register/byEmail",
-        bodyForApi = {};
-
-    bodyForApi = {
-        profile: body,
-        event: {
-            schemaId: eventSchema,
-            objectId: eventId
-        }
-    }
+        url = apiUrl + "/objects/offline";
 
     xhr.open('POST', url, true);
     xhr.setRequestHeader('Content-Type', 'application/json');
@@ -46,7 +37,7 @@ export const apiUserRegistration = function (body) {
         hideLoader();
 
     };
-    xhr.send(JSON.stringify(bodyForApi));
+    xhr.send(JSON.stringify(body));
 }
 
 export const apiReceiveDictionaryData = function(dictionaryName, language = 'ru') {

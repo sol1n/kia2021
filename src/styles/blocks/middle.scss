@@ -1,6 +1,5 @@
 .middle {
     background: $red;
-    height: 332px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px -4px 4px rgba(0, 0, 0, 0.25);
     position: relative;
     overflow: hidden;
@@ -14,7 +13,7 @@
 .message {
     width: em(813);
     color: #fff;
-    padding: em(50) 0 0;
+    padding: em(50) 0 em(35);
 
     &__header {
         font-family: Gilroy;
@@ -44,11 +43,11 @@
 
 .stripes {
     position: absolute;
-    top: 0;
+    top: -14px;
     background: url("../assets/stripes.svg") no-repeat;
-    width: 479px;
-    height: 332px;
-    left: -233px;
+    width: 562px;
+    height: 1500px;
+    left: -325px;
 }
 
 @include mobile() {
