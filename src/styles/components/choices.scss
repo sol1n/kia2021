@@ -3,6 +3,26 @@
     .choices__inner {
       border-color: $red;
     }
+
+    &.is-open {
+      .choices__inner {
+        border-radius: 4px 4px 0 0;
+      }
+    }
+
+    &.is-flipped {
+      &.is-open {
+        .choices__inner {
+          border-radius: 0 0 4px 4px;
+        }
+      }
+
+      .choices__list--dropdown.choices__list {
+        border-radius: 4px 4px 0 0;
+        border-top: 1px;
+        border-bottom: 0;
+      }
+    }
   }
 }
 
@@ -61,4 +81,11 @@
 
 .choices__list--single {
   padding-right: 33px;
+}
+
+.choices__list--dropdown.choices__list {
+  .choices__item {
+    padding: 8px;
+    line-height: 22px;
+  }
 }
