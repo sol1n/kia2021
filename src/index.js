@@ -8,6 +8,7 @@ import {hideLoader} from "./helpers/loader";
 import { hideSuccessMessage } from "./helpers/message";
 import {fetchAutocompleteData} from "./helpers/autocomplete-data";
 import {cleanInputs} from "./helpers/clean-inputs";
+import {initRegionSelect} from "./helpers/select";
 
 var formSelector = '#register-form',
     form = null,
@@ -37,6 +38,8 @@ function ready() {
     var autocompleteData = fetchAutocompleteData();
 
     initAutocomplete(autocompleteData);
+
+    initRegionSelect(autocompleteData['Regions']);
 
     form.addEventListener('submit', function (event) {
         event.preventDefault();
