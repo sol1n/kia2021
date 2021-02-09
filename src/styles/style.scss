@@ -93,6 +93,8 @@ body {
 @import "../../node_modules/autocompleter/autocomplete.min.css";
 @import "./components/autocomplete";
 @import "./components/loader";
+@import "../../node_modules/choices.js/src/styles/choices";
+@import "./components/choices";
 
 @include mobile() {
   body {

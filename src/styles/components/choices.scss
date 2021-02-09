@@ -1,0 +1,64 @@
+.choices {
+  &.is-focused {
+    .choices__inner {
+      border-color: $red;
+    }
+  }
+}
+
+.choices__inner {
+  background: #ffffff;
+  border: 1px solid #c7c1cc;
+  border-radius: 4px;
+}
+
+.choices__item {
+  font-family: 'SF Text', -apple-system, BlinkMacSystemFont, san-serif;
+  font-size: $baseFontSize;
+}
+
+.choices__list--dropdown .choices__item {
+  font-family: 'SF Text', -apple-system, BlinkMacSystemFont, san-serif;
+  font-size: 14px;
+
+  &.is-selected {
+    background: $red;
+    color: #fff;
+  }
+
+  &.is-highlighted {
+    background: lighten($red, 10);
+    color: #fff;
+  }
+}
+
+.choices__list  {
+  padding: 4.5px;
+}
+
+.choices[data-type*=select-one]:after, .choices[data-type*=select-one].is-open:after {
+  background: url("../assets/down.svg") no-repeat center center;
+  width: 22px;
+  height: 22px;
+  border: 0;
+  right: 11px;
+  margin-top: 0;
+  transform: translateY(-50%);
+}
+
+.choices__list--dropdown.choices__list, .choices__list--dropdown.choices__list .choices__list {
+  padding: 0;
+}
+
+.choices__list--dropdown.choices__list {
+  border-color: $red;
+  //max-height: 150px!important;
+  border-radius: 0 0 4px 4px;
+  border-top: 0;
+  //overflow-y: scroll;
+}
+
+
+.choices__list--single {
+  padding-right: 33px;
+}
