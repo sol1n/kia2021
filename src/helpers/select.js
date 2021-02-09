@@ -8,7 +8,7 @@ const initRegionSelect = (data) => {
             placeholderValue: "Выберите регион",
             choices: data.map(item => {
                 return {
-                    value: item.id,
+                    value: item.title,
                     label: item.title
                 }
             }),

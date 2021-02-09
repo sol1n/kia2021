@@ -21,7 +21,7 @@ export const fsm = {
       'main': {
         input: function() {
             isInputsValid('#register-form', '#submit-button')
-        }, 
+        },
       },
     }
   };
@@ -40,6 +40,7 @@ export const setInputHandler = function(container, handler) {
         break;
       case "SELECT":
         e.onchange = handler;
+        e.choice = handler;
         break;
     }
   });
