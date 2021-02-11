@@ -13,7 +13,8 @@ const initRegionSelect = (data) => {
                 }
             }),
             searchEnabled: false,
-            itemSelectText: ''
+            itemSelectText: '',
+            shouldSort: false
         })
     }
 }
